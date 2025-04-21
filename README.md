@@ -14,7 +14,7 @@ Primeiro projeto da disciplina de Estrutura de Dados II do curso de Análise e D
 ...
 
 ## Autores
-- [Carolaine](https://github.com/???)
+- [Carolaine Silva](https://github.com/Carol316)
 - [Lucas Gomes](https://github.com/LucasLins13)
 - [Luiz Eduardo](https://github.com/luizeduardo-yk)
 - [Pedro Guilherme](https://github.com/PedroGuilhermeYS)
