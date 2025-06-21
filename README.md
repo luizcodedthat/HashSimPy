@@ -35,10 +35,7 @@ HASHSIMPY/
 
 ## 👨‍💻 Como Usar
 
-1. **Instale as dependências (se houver)**  
-   *(por padrão, só usa bibliotecas da standard library)*
-
-2. **Rode a ferramenta na linha de comando**:
+1. **Rode a ferramenta na linha de comando**:
 
 ```bash
 python -m hashsimpy assets/poema1.txt assets/poema3.txt
