@@ -53,8 +53,17 @@ python -m hashsimpy assets/poema1.txt assets/poema3.txt
 [✓] Assinaturas MinHash calculadas.
 [✓] Comparação final:
 
-→ Similaridade Jaccard real: 0.432
-→ Similaridade estimada por MinHash: 0.410
+==================================================
+============== COMPARAÇÃO DE DOCUMENTOS ==========
+==================================================
+
+Método                          Similaridade
+--------------------------------------------------
+Jaccard exata                       75.00%
+Estimativa MinHash                  72.00%
+
+==================================================
+
 ```
 
 ---
@@ -88,7 +97,7 @@ python -m hashsimpy assets/poema1.txt assets/poema3.txt
 - [x] Interface CLI funcional
 - [x] Testes manuais
 - [x] Organização do repositório no GitHub
-- [x] Documentação e apresentação
+- [x] Documentação
 
 ---
 
