@@ -75,7 +75,7 @@ python -m hashsimpy assets/poema1.txt assets/poema3.txt
 | Pessoa A (Carol)| Leitura de arquivos, pré-processamento e CLI |
 | Pessoa B (Lucas) | Geração de shingles e README |
 | Pessoa C (Luiz Eduardo) | MinHashing e apresentação |
-| Pessoa D (Pedro Guilherme|Marcapasso) | Comparação, integração dos módulos e fluxo final |
+| Pessoa D (Pedro Guilherme.Marcapasso) | Comparação, integração dos módulos e fluxo final |
 
 ---
 
