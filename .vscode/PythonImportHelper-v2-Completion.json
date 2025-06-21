@@ -1,0 +1,146 @@
+[
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "test_similaridade_jaccard",
+        "kind": 2,
+        "importPath": "hashsimpy.testes.teste_comparador",
+        "description": "hashsimpy.testes.teste_comparador",
+        "peekOfCode": "def test_similaridade_jaccard():\n    assinatura1 = [1, 2, 3, 4, 5]\n    assinatura2 = [1, 2, 0, 4, 0]\n    assert similaridade_jaccard(assinatura1, assinatura2) == 3/5",
+        "detail": "hashsimpy.testes.teste_comparador",
+        "documentation": {}
+    },
+    {
+        "label": "test_ler_arquivo",
+        "kind": 2,
+        "importPath": "hashsimpy.testes.teste_leitor",
+        "description": "hashsimpy.testes.teste_leitor",
+        "peekOfCode": "def test_ler_arquivo(caminho_tmp):\n    caminho_teste = caminho_tmp / \"exemplo.txt\"\n    caminho_teste.write_text(\"Teste de leitura\")\n    assert ler_arquivo(caminho_teste) == \"Teste de leitura\"",
+        "detail": "hashsimpy.testes.teste_leitor",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "hashsimpy.cli",
+        "description": "hashsimpy.cli",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description=\"Verifica similaridade entre dois documentos de texto.\")\n    parser.add_argument(\"arquivo1\", help=\"Caminho para o primeiro arquivo de texto\")\n    parser.add_argument(\"arquivo2\", help=\"Caminho para o segundo arquivo de texto\")\n    argumentos = parser.parse_args()\n    texto1 = preprocessar_texto(ler_arquivo(argumentos.arquivo1))\n    texto2 = preprocessar_texto(ler_arquivo(argumentos.arquivo2))\n    shingles1 = gerar_shingles(texto1)\n    shingles2 = gerar_shingles(texto2)\n    assinatura1 = calcular_assinatura_minhash(shingles1)",
+        "detail": "hashsimpy.cli",
+        "documentation": {}
+    },
+    {
+        "label": "similaridade_jaccard",
+        "kind": 2,
+        "importPath": "hashsimpy.comparador",
+        "description": "hashsimpy.comparador",
+        "peekOfCode": "def similaridade_jaccard(assinatura1, assinatura2):\n    if len(assinatura1) != len(assinatura2):\n        raise ValueError(\"Assinaturas de tamanhos diferentes.\")\n    iguais = sum(1 for a, b in zip(assinatura1, assinatura2) if a == b)\n    return iguais / len(assinatura1)",
+        "detail": "hashsimpy.comparador",
+        "documentation": {}
+    },
+    {
+        "label": "ler_arquivo",
+        "kind": 2,
+        "importPath": "hashsimpy.leitor",
+        "description": "hashsimpy.leitor",
+        "peekOfCode": "def ler_arquivo(caminho_arquivo):\n    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:\n        return arquivo.read()",
+        "detail": "hashsimpy.leitor",
+        "documentation": {}
+    },
+    {
+        "label": "hash_shingle",
+        "kind": 2,
+        "importPath": "hashsimpy.minhash",
+        "description": "hashsimpy.minhash",
+        "peekOfCode": "def hash_shingle(shingle, semente):\n    return\ndef calcular_assinatura_minhash(shingle_set):\n    return",
+        "detail": "hashsimpy.minhash",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_assinatura_minhash",
+        "kind": 2,
+        "importPath": "hashsimpy.minhash",
+        "description": "hashsimpy.minhash",
+        "peekOfCode": "def calcular_assinatura_minhash(shingle_set):\n    return",
+        "detail": "hashsimpy.minhash",
+        "documentation": {}
+    },
+    {
+        "label": "NUMERO_HASHES",
+        "kind": 5,
+        "importPath": "hashsimpy.minhash",
+        "description": "hashsimpy.minhash",
+        "peekOfCode": "NUMERO_HASHES = 100\ndef hash_shingle(shingle, semente):\n    return\ndef calcular_assinatura_minhash(shingle_set):\n    return",
+        "detail": "hashsimpy.minhash",
+        "documentation": {}
+    },
+    {
+        "label": "ler_arquivo_txt",
+        "kind": 2,
+        "importPath": "hashsimpy.pre_processador",
+        "description": "hashsimpy.pre_processador",
+        "peekOfCode": "def ler_arquivo_txt(caminho):\n    \"\"\"Lê um arquivo .txt e retorna seu conteúdo como uma string.\"\"\"\n    with open(caminho, 'r', encoding='utf-8') as arquivo:\n        return arquivo.read()\ndef preprocessar_texto(texto):\n    \"\"\"\n    Aplica pré-processamento:\n    - Converte para minúsculas\n    - Remove pontuação e números usando regex\n    \"\"\"",
+        "detail": "hashsimpy.pre_processador",
+        "documentation": {}
+    },
+    {
+        "label": "preprocessar_texto",
+        "kind": 2,
+        "importPath": "hashsimpy.pre_processador",
+        "description": "hashsimpy.pre_processador",
+        "peekOfCode": "def preprocessar_texto(texto):\n    \"\"\"\n    Aplica pré-processamento:\n    - Converte para minúsculas\n    - Remove pontuação e números usando regex\n    \"\"\"\n    texto = texto.lower()\n    texto = re.sub(r'[^a-z\\s]', '', texto)  # Mantém apenas letras e espaços\n    texto = re.sub(r'\\s+', ' ', texto)      # Remove espaços duplicados\n    return texto.strip()",
+        "detail": "hashsimpy.pre_processador",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_shingles",
+        "kind": 2,
+        "importPath": "hashsimpy.pre_processador",
+        "description": "hashsimpy.pre_processador",
+        "peekOfCode": "def gerar_shingles(texto, k=3):\n    \"\"\"\n    Gera conjuntos de shingles de tamanho k a partir do texto.\n    Cada shingle é uma sequência de k caracteres consecutivos.\n    \"\"\"\n    return {texto[i:i+k] for i in range(len(texto) - k + 1)}\n# Exemplo de uso para testes manuais\nif __name__ == \"__main__\":\n    caminho = \"examples/exemplo1.txt\"  # ou exemplo2.txt / exemplo3.txt\n    texto = ler_arquivo_txt(caminho)",
+        "detail": "hashsimpy.pre_processador",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_shingles",
+        "kind": 2,
+        "importPath": "hashsimpy.shingles",
+        "description": "hashsimpy.shingles",
+        "peekOfCode": "def gerar_shingles(texto: str, k: int = 5) -> set:\n    \"\"\"\n    Gera um conjunto de shingles (substrings consecutivas) a partir do texto.\n    Args:\n        texto (str): Texto pré-processado.\n        k (int): Tamanho dos shingles.\n    Returns:\n        set: Conjunto de shingles únicos.\n    \"\"\"\n    if len(texto) < k:",
+        "detail": "hashsimpy.shingles",
+        "documentation": {}
+    }
+]
